@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/ion.rangeSlider.css" />
+    <link rel="stylesheet" href="css/ion.rangeSlider.skinFlat.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <title>Document</title>
+ 
+    
+</head>
+<body>
+  <header>
+     
+        <nav class="navbar  navbar-trans navbar-expand-lg fixed-top">
+                <a class="navbar-brand pl-4" href="#">Navbar</a>
+                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav ml-auto pr-2">
+                    <li class="nav-item active pr-2">
+                      <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item pr-2">
+                      <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item pr-2">
+                            <a class="nav-link" href="#">Contact</a>
+                          </li>
+                    <li class="nav-item pr-2">
+                      <a class="nav-link" href="#" data-toggle="modal" data-target="#myModal">Login</a>
+                    </li>
+                   
+                  </ul>
+                </div>
+              </nav>
+
+              <div class="modal" id="myModal">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                
+                      <!-- Modal Header -->
+                      <div class="modal-header">
+                        <h4 class="modal-title">Modal Heading</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      </div>
+                
+                      <!-- Modal body -->
+                      <div class="modal-body">
+                          <form action="/action_page.php" name="form" onsubmit="return checkForm(this)";>
+                            <div class="form-group">
+                              <label for="email">Email address:</label>
+                              <input type="email" class="form-control" name="email" required>
+                            </div>
+                            <div class="form-group">
+                              <label for="pwd">Password:</label>
+                              <input type="password" class="form-control" name="pwd" pattern = "/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}$/" required>
+                            </div>
+                            <div class="form-group form-check">
+                              <label class="form-check-label">
+                                <input class="form-check-input" type="checkbox"> Remember me
+                              </label>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Signin</button><br/>
+                              <a href="register.html" target="_blank">Register Here</a>
+                          </form>
+                      </div>
+                
+                      <!-- Modal footer -->
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
+                      </div>
+                
+                    </div>
+                  </div>
+                </div>
+             
+     </header>
+
+     <section>
+            <div class="box">
+                    <img class="img-fluid" src="img/img2.png" alt="header image" />
+                    <div class="img-title">
+                      <h1>Home is where love resides, memories are created, friends always belong, and laughter never ends......</h1>
+                      
+                 
+                           <div class="container"> 
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4 col-sm-4"></div>
+                                    <div class="col-md-4 col-lg-4 col-sm-4">
+                                      <a href="#search"><button class="btn btn-light  mt-4" >Find Your Home</button></a>
+                                    </div>
+                                  </div>
+                                  </div>      
+                    </div>
+            </div>
+                  
+            </section>
+                  
+          
+         <section id="search">
+                <div class="search-area mt-4">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="advanced-search-form">
+                                        <!-- Search Title -->
+                                        <div class="search-title text-center">
+                                            <p>Search for your home</p>
+                                        </div>
+                                        <div class="move">
+                                        <!-- Search Form -->
+                                        <form action="#" method="post" id="advanceSearch">
+                                            <div class="row">
+                
+                                                <div class="col-12 col-md-4 col-lg-3">
+                                                    <div class="form-group">
+                                                        <input type="input" class="form-control" name="input" placeholder="Keyword">
+                                                    </div>
+                                                </div>
+                
+                                                <div class="col-12 col-md-4 col-lg-3">
+                                                    <div class="form-group">
+                                                        <select class="form-control" id="cities">
+                                                          
+                                                            <option>Nagpur</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                
+                                                <div class="col-12 col-md-4 col-lg-3">
+                                                    <div class="form-group">
+                                                        <select class="form-control" id="catagories">
+
+                                                            <option>Rental</option>
+
+                                                        </select>
+                                                    </div>
+                                                </div>
+                
+                                                <div class="col-12 col-md-4 col-lg-3">
+                                                        <div class="form-group">
+                                                            <input type="input" class="form-control" name="input" placeholder="Enter Pincode">
+                                                        </div>
+                                                    </div>
+                
+                
+                                                <div class="col-12 col-md-4 col-xl-2">
+                                                    <div class="form-group">
+                                                        <select class="form-control" id="bedrooms">
+                                                            <option>Bedrooms</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                            <option>5+</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                
+                                                <div class="col-12 col-md-4 col-xl-2">
+                                                    <div class="form-group">
+                                                        <select class="form-control" id="bathrooms">
+                                                            <option>Bathrooms</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                            <option>5+</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                
+                                                <div class="col-12 col-md-8 col-lg-12 col-xl-5 d-flex">
+                                                      <input type="range" min="0" max="100" value="50" class="sliser" id="slider">
+                                                    </div>
+
+                                                    <div class="form-group mb-0">
+                                                            <button type="submit" class="btn  btn-primary">Search</button>
+                                                        </div>
+                                                        </div>
+                                                        
+                                                </div>
+                                                </div>
+                                                </form>
+                                                </div>
+                                                </div>
+                                                </div>
+                                                </div>
+                                                </div>
+                                                
+                                                
+                
+                                              
+                    <!-- ##### Advance Search Area End ##### -->
+             </section>   
+             
+             
+<section>
+<div class="container">
+  <h1 class="head mt-5">BEST DEAL....... </h1>
+
+<div class="row mt-5 ">
+    <div class="col-lg-1 col-md-12 col-sm-12 mr-auto mb-2"></div>
+
+        <div class="card col-lg-3 col-md-6 col-sm-12 mr-auto  mb-2">
+
+                <!-- Card image -->
+                <div class="view overlay">
+                  <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/food.jpg" alt="Card image cap" >
+                  <a>
+                    <div class="mask rgba-white-slight"></div>
+                  </a>
+                </div>
+              
+                <!-- Button -->
+                <a class="btn-floating btn-action ml-auto mr-4 mdb-color lighten-3"><i class="fas fa-chevron-right pl-1"></i></a>
+              
+                <!-- Card content -->
+                <div class="card-body">
+              
+                  <!-- Title -->
+                  <h4 class="card-title">Card title</h4>
+                  <hr>
+                  <!-- Text -->
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              
+                </div>
+           
+              </div>
+              <!-- Card -->
+
+
+              <div class="card col-lg-3 col-md-6 col-sm-12  mr-auto  mb-2">
+                
+
+                    <!-- Card image -->
+                    <div class="view overlay">
+                      <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/food.jpg" alt="Card image cap">
+                      <a>
+                        <div class="mask rgba-white-slight"></div>
+                      </a>
+                    </div>
+                  
+                    <!-- Button -->
+                    <a class="btn-floating btn-action ml-auto mr-4 mdb-color lighten-3"><i class="fas fa-chevron-right pl-1"></i></a>
+                  
+                    <!-- Card content -->
+                    <div class="card-body">
+                  
+                      <!-- Title -->
+                      <h4 class="card-title">Card title</h4>
+                      <hr>
+                      <!-- Text -->
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  
+                    </div>
+               
+                  </div>
+                  <!-- Card -->
+
+
+                  <div class="card col-lg-3 col-md-6 col-sm-12 mr-auto mb-2">
+                    
+
+                        <!-- Card image -->
+                        <div class="view overlay">
+                          <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/food.jpg" alt="Card image cap">
+                          <a>
+                            <div class="mask rgba-white-slight"></div>
+                          </a>
+                        </div>
+                      
+                        <!-- Button -->
+                        <a class="btn-floating btn-action ml-auto mr-4 mdb-color lighten-3"><i class="fas fa-chevron-right pl-1"></i></a>
+                      
+                        <!-- Card content -->
+                        <div class="card-body">
+                      
+                          <!-- Title -->
+                          <h4 class="card-title">Card title</h4>
+                          <hr>
+                          <!-- Text -->
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      
+                        </div>
+                   
+                      </div>
+                      <!-- Card -->
+                      <hr/>
+                      <div class="col-lg-5 col-md-4 col-sm-4 mb-5">
+                 
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-12 mb-5">
+                               <a href="more.html"><button class="btn btn-light  mt-4" id="btn1">More Properties</button></a>
+                    
+                            </div>
+                      
+</div>
+</div>
+ </section>
+
+  <!-- ##### Footer Area Start ##### -->
+  <footer class="footer-area section-padding-100-0 bg-img gradient-background-overlay" style="background-image: url(img/img3.png);">
+    <!-- Main Footer Area -->
+    <div class="main-footer-area">
+        <div class="container">
+            <div class="row">
+
+                <!-- Single Footer Widget -->
+                <div class="col-lg-3 col-md-6 col-sm-12 mr-auto mb-5">
+                    <div class="footer-widget-area mb-100">
+                        <!-- Widget Title -->
+                        <div class="widget-title">
+                            <h6>About Us</h6>
+                        </div>
+<!-- 
+                        <img src="img/bg-img/footer.jpg" alt="">
+                        <div class="footer-logo my-4">
+                            <img src="img/core-img/logo.png" alt="">
+                        </div> -->
+                        <p>Integer nec bibendum lacus. Suspen disse dictum enim sit amet libero males uada feugiat. Praesent malesuada.</p>
+                    </div>
+                </div>
+
+                <!-- Single Footer Widget -->
+                <div class="col-lg-4 col-md-6 col-sm-12 mr-auto mb-5">
+                    <div class="footer-widget-area mb-100">
+                        <!-- Widget Title -->
+                        <div class="widget-title ml-5">
+                            <h6>Hours</h6>
+                        </div>
+                        <!-- Office Hours -->
+                        <div class="weekly-office-hours">
+                            <ul>
+                                <li class="d-flex align-items-center justify-content-between"><span>Monday - Friday</span> <span>09 AM - 19 PM</span></li>
+                                <li class="d-flex align-items-center justify-content-between"><span>Saturday</span> <span>09 AM - 14 PM</span></li>
+                                <li class="d-flex align-items-center justify-content-between"><span>Sunday</span> <span>Closed</span></li>
+                            </ul>
+                        </div>
+                        <!-- Address -->
+                        <div class="address">
+                            <h6><img src="img/icons/phone-call.png" alt=""> +45 677 8993000 223</h6>
+                            <h6><img src="img/icons/envelope.png" alt=""> office@template.com</h6>
+                            <h6><img src="img/icons/location.png" alt=""> Main Str. no 45-46, b3, 56832, Los Angeles, CA</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Footer Widget -->
+                <div class="col-lg-2 col-md-6 col-sm-12 mr-auto mb-5">
+                    <div class="footer-widget-area mb-100">
+                        <!-- Widget Title -->
+                        <div class="widget-title ml-4">
+                            <h6>Menu</h6>
+                        </div>
+                       
+                        <ul class="list-group list-group-flush mylist">
+                            <li class="list-group-item mb-4"><a class="mylist " href="#">Home</a></li>
+                            <li class="list-group-item mb-4"><a class="mylist " href="">About us</a></li>
+                            <li class="list-group-item mb-4"><a class="mylist " href="#">Contact</a></li>
+                            <li class="list-group-item mb-4"><a class="mylist " href="#">Register</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Single Footer Widget -->
+                <div class="col-lg-3 col-md-6 col-sm-12 mr-auto mb-5">
+                    <div class="footer-widget-area mb-100">
+                        <!-- Widget Title -->
+                        <div class="widget-title">
+                            <h6>Spread us all over the world</h6>
+                        </div>
+                        <!-- social icons -->
+                       
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Copywrite Text -->
+    <div class="copywrite-text d-flex align-items-center justify-content-center">
+        <p>
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved to Bellatrix
+
+    </div>
+</footer>
+<!-- ##### Footer Area End ##### -->
+
+
+
+
+
+
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script> 
+<script src="js/ion.rangeSlider.js"></script>
+</body>
+</html>
